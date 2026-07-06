@@ -1,1 +1,1 @@
-alert("Calculou!")
+alert("Calculou!");
