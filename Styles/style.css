@@ -23,7 +23,7 @@ div#form{
     color: black;
 
 }
-label#peso{
+label#labPeso{
     color: white;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,7 +35,7 @@ input#peso{
     border-radius: 10px;
     text-align: center;
 }
-label#altura{
+label#labAltura{
     color: white;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
