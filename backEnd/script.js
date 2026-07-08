@@ -1,4 +1,3 @@
-
 /**
  * IMC	              Classificação
 Abaixo de 18,5	      Peso baixo
@@ -17,35 +16,33 @@ var altura;
 var imcCalculado;
 var resultado;
 
-function calcularIMC(event){
+function calcularIMC(event) {
+  //preventDefault =  Impede o recarregamento da página
+  event.preventDefault();
 
-    //preventDefault =  Impede o recarregamento da página
-    event.preventDefault();
+  peso = document.getElementById("peso").value;
+  altura = document.getElementById("altura").value;
 
-    peso = document.getElementById('peso').value;
-    altura = document.getElementById('altura').value;
+  //Regra de calculo do IMC => peso / (altura * altura);
+  imcCalculado = peso / (altura * altura);
 
-    //Regra de calculo do IMC => peso / (altura * altura);
-    imcCalculado = peso / (altura * altura);
+  resultado = document.getElementById("resultado");
 
-    resultado = document.getElementById('resultado');
+  if (imcCalculado < 18.5) {
+    resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Peso baixo!`;
+  } else if (imcCalculado > 18.5 && imcCalculado < 24.9) {
+    resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Peso normal`;
+  } else if (imcCalculado > 25 && imcCalculado < 29.9) {
+    resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Sobrepeso`;
+  } else if (imcCalculado > 30 && imcCalculado < 34.9) {
+    resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Obesidade I`;
+  } else if (imcCalculado > 35 && imcCalculado < 39.9) {
+    resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Obesidade II`;
+  } else if (imcCalculado > 40) {
+    resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Obesidade III`;
+  }
 
-    if(imcCalculado < 18.5){
-        resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Peso baixo!`
-    }else if (imcCalculado > 18.5 && imcCalculado < 24.9 ){
-        resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Peso normal`
-    }else if (imcCalculado > 25 && imcCalculado < 29.9 ){
-        resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Sobrepeso`
-    }else if (imcCalculado > 30 && imcCalculado < 34.9 ){
-        resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Obesidade I`
-    }else if (imcCalculado > 35 && imcCalculado < 39.9 ){
-        resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Obesidade II`
-    }else if (imcCalculado > 40){
-        resultado.innerHTML = `<br/> Seu IMC é de ${imcCalculado.toFixed(2)}, CLASSIFICAÇÃO: Obesidade III`
-    }
-
-    //Limpando o formulário
-    document.getElementById('peso').value = '';
-    document.getElementById('altura').value = '';
-
+  //Limpando o formulário
+  document.getElementById("peso").value = "";
+  document.getElementById("altura").value = "";
 }

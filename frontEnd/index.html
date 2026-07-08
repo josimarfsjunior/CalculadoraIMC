@@ -1,36 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Styles/style.css" />
     <title>Calculando IMC - Índice de Massa Corporal</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="titulo">
-        <h1 id="txtTitulo">Descubra agora o seu Índice de Massa Corporal (IMC)</h1>        
+      <h1 id="txtTitulo">
+        Descubra agora o seu Índice de Massa Corporal (IMC)
+      </h1>
 
-        <div id="form">
-            <form onsubmit="return calcularIMC(event)">
+      <div id="form">
+        <form onsubmit="return calcularIMC(event);">
+          <label id="labPeso">Peso(Kg):</label>
+          <input type="text" name="peso" id="peso" placeholder="Exemplo: 65" />
 
-                <label id="labPeso">Peso:</label>
-                <input type="text" name="peso" id="peso" placeholder="Exemplo: 65"/>
+          <label id="labAltura">Altura(Mt):</label>
+          <input
+            type="text"
+            name="altura"
+            id="altura"
+            placeholder="Exemplo: 1.60"
+          />
 
-                <label id="labAltura">Altura:</label>
-                <input type="text" name="altura" id="altura" placeholder="Exemplo: 1.60"/>
+          <input id="btnCalcular" type="submit" value="Calcular IMC" />
 
-                <input id="btnCalcular" type="submit" value="Calcular IMC"/>
+          <div id="resultado"></div>
+        </form>
+      </div>
 
-                <div id="resultado"></div>
+      <div id="tabelaIMC">
+        <h2>Tabela IMC + Classificação</h2>
+        <br />
 
-            </form>
-        </div>
+        <p id="baixo">Entre 00.00 e 18.49 Peso baixo</p>
+        <p id="normal">Entre 18.50 e 24.99 Peso normal</p>
+        <p id="sobrepeso">Entre 25.00 e 29.99 Sobrepeso</p>
+        <p id="sobrepesoI">Entre 30.00 e 34.99 Obesidade I</p>
+        <p id="sobrepesoII">Entre 35.00 e 39.99 Obesidade II</p>
+        <p id="sobrepesoIII">Acima de 40.00 Obesidade III</p>
+      </div>
+      <h4>
+        *Essa calculadora de IMC é para adultos com 19 anos ou mais. Converse
+        com seu médico sobre seu IMC se você tiver menos de 19 anos de idade
+      </h4>
     </div>
 
-    
-
-
     <script src="/backEnd/script.js"></script>
-    
-</body>
+  </body>
 </html>
