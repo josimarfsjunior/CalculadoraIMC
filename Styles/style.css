@@ -16,9 +16,11 @@ div#titulo {
 
 h1#txtTitulo {
   color: white;
+  font-size: 35px;
 }
 
 div#form {
+  margin-top: 30px;
   background-color: rgb(3, 74, 145);
   border-radius: 0;
   padding-top: 10px;
@@ -39,7 +41,7 @@ label#labPeso {
 }
 input#peso {
   width: 250px;
-  height: 20px;
+  height: 25px;
   border-radius: 10px;
   text-align: center;
   font-size: medium;
@@ -52,18 +54,20 @@ label#labAltura {
 }
 input#altura {
   width: 250px;
-  height: 20px;
+  height: 25px;
   border-radius: 10px;
   text-align: center;
   font-size: medium;
 }
 
 input#btnCalcular {
-  width: 100px;
-  height: 25px;
-  font-size: smaller;
+  width: 120px;
+  height: 30px;
+  font-size: medium;
   font-weight: bold;
   border-radius: 10px;
+  background-color: azure;
+  cursor: pointer;
 }
 
 div#resultado {
@@ -76,7 +80,6 @@ div#resultado {
 }
 
 div#tabelaIMC {
-  border-radius: 25px;
   background-color: rgb(82, 108, 240);
   border-radius: 0 0 25px 25px;
   display: flex; /* Ativa o Flexbox */
@@ -84,11 +87,14 @@ div#tabelaIMC {
   align-items: center; /* Centraliza na vertical */
   /*height: 30vh;  Faz o container ocupar 100% da altura da tela */
   width: 90vw; /* Faz o container ocupar 100% da largura da tela */
-  height: 30vh; /* Faz o container ocupar 100% da altura da tela */
+  height: 10vh; /* Faz o container ocupar 100% da altura da tela */
 }
 
-h2 {
+h3 {
+  margin-top: 30px;
   color: white;
+  align-content: center;
+  align-items: center;
 }
 
 p#baixo {
@@ -141,6 +147,76 @@ p#sobrepesoII {
 }
 p#sobrepesoIII {
   font-size: 18px;
+  font-weight: 600;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(193, 7, 1);
+  margin-right: 5%;
+  border-radius: 0 5px 5px 0;
+  padding-top: 5px;
+}
+
+div#linhaIMC {
+  background-color: rgb(82, 108, 240);
+
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+  /*height: 30vh;  Faz o container ocupar 100% da altura da tela */
+  width: 90vw; /* Faz o container ocupar 100% da largura da tela */
+  height: 10vh; /* Faz o container ocupar 100% da altura da tela */
+}
+p#linhaBaixo {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(252, 168, 0);
+  border-radius: 5px 0 0 5px;
+  padding-top: 5px;
+}
+
+p#linhaNormal {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(0, 158, 40);
+  padding-top: 5px;
+}
+
+p#linhaSobrepeso {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(204, 201, 3);
+  padding-top: 5px;
+}
+p#linhaSobrepesoI {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(193, 116, 1);
+  padding-top: 5px;
+}
+p#linhaSobrepesoII {
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(193, 75, 1);
+  padding-top: 5px;
+}
+p#linhaSobrepesoIII {
+  font-size: 35px;
   font-weight: 600;
   color: white;
   width: 200px;

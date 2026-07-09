@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Styles/style.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>Calculando IMC - Índice de Massa Corporal</title>
   </head>
   <body>
@@ -15,15 +16,20 @@
       <div id="form">
         <form onsubmit="return calcularIMC(event);">
           <label id="labPeso">Peso(Kg):</label>
-          <input type="text" name="peso" id="peso" placeholder="Exemplo: 65" />
+          <input
+            type="text"
+            name="peso"
+            id="peso"
+            placeholder="Exemplo de peso: 65"
+          />
 
           <label id="labAltura">Altura(Mt):</label>
           <input
             type="text"
             name="altura"
             id="altura"
-            placeholder="Exemplo: 1.60"
-          />
+            placeholder="Exemplo de altura: 1.60"
+          />&nbsp;&nbsp;
 
           <input id="btnCalcular" type="submit" value="Calcular IMC" />
 
@@ -31,10 +37,18 @@
         </form>
       </div>
 
-      <div id="tabelaIMC">
-        <h2>Tabela IMC + Classificação</h2>
-        <br />
+      <div id="linhaIMC">
+        <h3>IMC Calculada &nbsp;&nbsp;&nbsp;&nbsp;</h3>
+        <p id="linhaBaixo"></p>
+        <p id="linhaNormal"></p>
+        <p id="linhaSobrepeso"></p>
+        <p id="linhaSobrepesoI"></p>
+        <p id="linhaSobrepesoII"></p>
+        <p id="linhaSobrepesoIII"></p>
+      </div>
 
+      <div id="tabelaIMC">
+        <h3>Classificação IMC</h3>
         <p id="baixo">Entre 00.00 e 18.49 Peso baixo</p>
         <p id="normal">Entre 18.50 e 24.99 Peso normal</p>
         <p id="sobrepeso">Entre 25.00 e 29.99 Sobrepeso</p>
@@ -42,9 +56,10 @@
         <p id="sobrepesoII">Entre 35.00 e 39.99 Obesidade II</p>
         <p id="sobrepesoIII">Acima de 40.00 Obesidade III</p>
       </div>
+
       <h4>
         *Essa calculadora de IMC é para adultos com 19 anos ou mais. Converse
-        com seu médico sobre seu IMC se você tiver menos de 19 anos de idade
+        com seu médico sobre seu IMC se você tiver menos de 19 anos de idade.
       </h4>
     </div>
 
